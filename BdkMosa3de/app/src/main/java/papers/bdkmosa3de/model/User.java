@@ -1,6 +1,7 @@
-package papers.bdkmosa3de;
+package papers.bdkmosa3de.model;
 
 public class User {
+    public String uid;
     public String username;
     public String email;
     public String phoneNumber;
@@ -28,7 +29,11 @@ public class User {
         this.password = password;
     }
 
-//    public void setBirthdate(String birthdate) {
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    //    public void setBirthdate(String birthdate) {
 //        this.birthdate = birthdate;
 //    }
 }

@@ -43,7 +43,8 @@ dependencies {
     annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
     implementation 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
-
+    implementation 'com.marvinlabs:android-slideshow-widget:0.4.+@aar'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

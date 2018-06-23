@@ -1,13 +1,14 @@
-package papers.bdkmosa3de;
+package papers.bdkmosa3de.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.WindowManager;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+
+import papers.bdkmosa3de.R;
 
 @EActivity(R.layout.activity_login)
 public class LoginActivity extends AppCompatActivity {

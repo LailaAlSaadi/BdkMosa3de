@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".activities.SignUpActivity"
+    >
 
     <!-- Comment this ImageView after you have handled the image background with Java at the Activity-->
     <ImageView
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@color/ic_launcher_background" />
+        android:src="@color/colorPrimaryDark" />
 
     <!--<ImageView-->
         <!--android:id="@+id/formLogo"-->
@@ -24,12 +25,13 @@
         <!--android:src="@drawable/logo" />-->
 
     <ScrollView
+        android:layout_marginTop="30dp"
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/formLogo">
 
-        <LinearcolorPrimaryDarkLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="30dp"
@@ -85,7 +87,7 @@
                 android:inputType="textEmailAddress"
                 android:textSize="14sp" />
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/userPassword"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -103,7 +105,7 @@
 
                 />
 
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/userCPassword"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -158,29 +160,29 @@
 
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/birthdate"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:drawablePadding="5dp"
-                android:fontFamily="@font/gochi_hand"
-                android:gravity="center"
-                android:inputType="number"
-                android:paddingStart="10dp"
-                android:text="@string/birthdate"
-                android:textColor="@color/white"
-                android:textSize="30sp"
+            <!--<TextView-->
+                <!--android:id="@+id/birthdate"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginEnd="15dp"-->
+                <!--android:layout_marginStart="15dp"-->
+                <!--android:drawablePadding="5dp"-->
+                <!--android:fontFamily="@font/gochi_hand"-->
+                <!--android:gravity="center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingStart="10dp"-->
+                <!--android:text="@string/birthdate"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="30sp"-->
 
-                />
+                <!--/>-->
 
             <!--<DatePicker-->
                 <!--android:id="@+id/birthdateIn"-->
                 <!--style="@style/date_picker_theme"-->
                 <!--android:layout_width="wrap_content"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center"></DatePicker>-->
+                <!--android:layout_gravity="center" />-->
 
 
             <Button
@@ -198,6 +200,6 @@
                 android:textColor="@color/white"
                 android:textSize="30sp" />
 
-        </LinearcolorPrimaryDarkLayout>
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>
