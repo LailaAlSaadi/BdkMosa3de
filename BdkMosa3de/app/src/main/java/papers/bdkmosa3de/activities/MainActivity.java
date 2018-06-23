@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     @ViewById(R.id.pager)
     public static ViewPager mPager;
+
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;

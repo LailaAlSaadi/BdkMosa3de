@@ -32,13 +32,13 @@ public class SplashScreen extends AppCompatActivity {
     @AfterViews
     public void startSplash() {
         new Handler().postDelayed(new Runnable() {
-            
+
             @Override
             public void run() {
 
 
-                SharedPreferences sharedPref = SplashScreen.this.getPreferences(Context.MODE_PRIVATE);
-                String uid = sharedPref.getString("uid", null);
+                SharedPreferences sharedpreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
+                String uid = sharedpreferences.getString("uid", null);
 
 
                 if (uid == null) {

@@ -77,15 +77,15 @@ public class SignUpActivity extends AppCompatActivity {
         itemDao.addEntry(user);
 
 
-        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
+        SharedPreferences sharedpreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
         editor.putString("uid",user.uid);
         editor.commit();
 
 
 
 
-        Intent i = new Intent(SignUpActivity.this, MainActivity.class);
+        Intent i = new Intent(SignUpActivity.this, MainActivity_.class);
         startActivity(i);
 
     }
