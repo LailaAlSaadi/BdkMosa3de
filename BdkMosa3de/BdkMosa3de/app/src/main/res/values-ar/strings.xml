@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Bdk Mosa3de? بدك مساعدة؟</string>
+    <string name="title_activity_login">تسجيل الدخول</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">البريد الالكتروني</string>
+    <string name="prompt_password">كلمة المرور</string>
+    <string name="email_edit_text_text">البريد الالكتروني</string>
+    <string name="password_edit_text_text">كلمة المرور</string>
+    <string name="sign_in_btn_text">تسجيل الدخول</string>
+    <string name="sign_up_text">ليس لديك حساب, </string>
+    <string name="sign_up_link"><u>قم بالتسجيل</u></string>
+
+    <string name="has_an_account_text">قمت بالتسجيل مسبقا</string>
+    <string name="sign_up">انشاء حساب</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="bdk_mosa3de">Bdk mosa3de?</string>
+    <string name="need_help">بدك مساعدة؟</string>
+    <string name="birthdate">يوم الميلاد</string>
+
+</resources>

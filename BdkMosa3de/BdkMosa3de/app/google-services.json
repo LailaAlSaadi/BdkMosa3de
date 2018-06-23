@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "857073494929",
+    "firebase_url": "https://bdkmosa3de.firebaseio.com",
+    "project_id": "bdkmosa3de",
+    "storage_bucket": "bdkmosa3de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857073494929:android:5e385dcd856921d4",
+        "android_client_info": {
+          "package_name": "papers.bdkmosa3de"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "857073494929-5ahp2d6htogcamft3u5f69ltvucpt1r2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "papers.bdkmosa3de",
+            "certificate_hash": "eb68455c69200b440943900f67faae22859f01b3"
+          }
+        },
+        {
+          "client_id": "857073494929-o32khcspe160j70mt66k092b905m7j87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5hlwfxJEzeEocYualjj5rdjJjHmgwg0g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "857073494929-o32khcspe160j70mt66k092b905m7j87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

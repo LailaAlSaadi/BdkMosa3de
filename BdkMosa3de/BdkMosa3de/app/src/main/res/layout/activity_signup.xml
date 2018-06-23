@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <!-- Comment this ImageView after you have handled the image background with Java at the Activity-->
+    <ImageView
+        android:id="@+id/formBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/ic_launcher_background" />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/formLogo"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:layout_marginBottom="30dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:src="@drawable/logo" />-->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formLogo">
+
+        <LinearcolorPrimaryDarkLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/trans_white_rectangle"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/gochi_hand"
+                android:paddingBottom="30dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="35dp"
+                android:paddingTop="50dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <AutoCompleteTextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_confirm_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gochi_hand"
+                android:hint="@string/user_name"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textSize="14sp"
+
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_user_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gochi_hand"
+                android:hint="@string/email_edit_text_text"
+                android:paddingStart="10dp"
+                android:inputType="textEmailAddress"
+                android:textSize="14sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_pass_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gochi_hand"
+                android:hint="@string/password_edit_text_text"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="14sp"
+
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/userCPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_confirm_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gochi_hand"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="14sp"
+
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/userPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gochi_hand"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/femal_maleRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/femaleRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/maleRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/gochi_hand"
+                android:gravity="center"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:text="@string/birthdate"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+
+                />
+
+            <!--<DatePicker-->
+                <!--android:id="@+id/birthdateIn"-->
+                <!--style="@style/date_picker_theme"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"></DatePicker>-->
+
+
+            <Button
+                android:id="@+id/signupNow"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="36dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/register_button"
+                android:fontFamily="@font/gochi_hand"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearcolorPrimaryDarkLayout>
+    </ScrollView>
+</RelativeLayout>

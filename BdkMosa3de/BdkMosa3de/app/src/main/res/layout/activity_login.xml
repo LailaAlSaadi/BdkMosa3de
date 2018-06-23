@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <!-- Comment this ImageView after you have handled the image background with Java at the Activity-->
+    <ImageView
+        android:id="@+id/formBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/ic_launcher_background"
+        />
+
+    <ImageView
+        android:id="@+id/formLogo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textlogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formLogo"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/gochi_hand"
+        android:gravity="center"
+        android:text="Need Help? "
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textlogo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/trans_white_rectangle"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/gochi_hand"
+                    android:gravity="center"
+                    android:hint="@string/has_an_account_text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/rounded_white"
+                    android:drawableLeft="@drawable/ic_user_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/email_edit_text_text"
+                    android:paddingStart="10dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/gochi_hand"
+                    />
+
+                <AutoCompleteTextView
+                    android:id="@+id/userPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/rounded_white"
+                    android:drawableLeft="@drawable/ic_pass_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/password_edit_text_text"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/gochi_hand"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/register_button"
+                    android:text="@string/sign_in_btn_text"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+                    android:fontFamily="@font/gochi_hand"
+                    android:textSize="30dp"
+                    />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_gravity="center"
+                   android:layout_marginBottom="30dp"
+                   android:gravity="center">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="30dp"
+                       android:layout_marginTop="5dp"
+                       android:layout_marginRight="5dp"
+                       android:text="@string/sign_up_text"
+                       android:textColor="@color/white"
+                       android:textStyle="normal"
+                       android:fontFamily="@font/gochi_hand"
+                       android:textSize="20sp"
+                       />
+
+                   <TextView
+                       android:id="@+id/signUpNow"
+                       android:layout_width="wrap_content"
+                       android:layout_height="30dp"
+                       android:layout_marginTop="5dp"
+                       android:text="@string/sign_up_link"
+                       android:textColor="@color/white"
+                       android:textStyle="normal"
+                       android:fontFamily="@font/gochi_hand"
+                       android:textSize="20sp"
+
+                       />
+
+               </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/trans_white_rectangle"
+                android:orientation="vertical">
+
+
+
+            </LinearLayout>
+
+
+            <!--<TextView-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:paddingEnd="10dp"-->
+            <!--android:paddingStart="10dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:text="او بتقدر تكمل بحساب الفيس بوك"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold"-->
+
+            <!--/>-->
+
+
+            <!--<TextView-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:paddingEnd="10dp"-->
+            <!--android:paddingStart="10dp"-->
+            <!--android:paddingTop="5dp"-->
+            <!--android:text="او اعمل حساب عن طريق الايميل"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textStyle="bold"-->
+
+            <!--/>-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

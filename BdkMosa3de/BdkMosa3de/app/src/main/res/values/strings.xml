@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Bdk Mosa3de? بدك مساعدة؟</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="email_edit_text_text">Email</string>
+    <string name="password_edit_text_text">Password</string>
+    <string name="sign_in_btn_text">Log In</string>
+    <string name="sign_up_text">Do not have an account, </string>
+    <string name="sign_up_link"><u>Sign up</u></string>
+
+    <string name="login_text">Login...</string>
+    <string name="has_an_account_text">I already have an Account</string>
+    <string name="use_social_text">Log in by...</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="bdk_mosa3de">Bdk mosa3de?</string>
+    <string name="need_help">بدك مساعدة؟</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="user_name">Username</string>
+    <string name="birthdate">Birthdate</string>
+</resources>
