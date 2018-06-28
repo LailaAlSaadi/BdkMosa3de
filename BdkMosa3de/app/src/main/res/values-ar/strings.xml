@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bdk Mosa3de? بدك مساعدة؟</string>
+    <string name="app_name">بدك مساعدة؟</string>
     <string name="title_activity_login">تسجيل الدخول</string>
 
     <!-- Strings related to login -->
@@ -17,5 +17,93 @@
     <string name="bdk_mosa3de">Bdk mosa3de?</string>
     <string name="need_help">بدك مساعدة؟</string>
     <string name="birthdate">يوم الميلاد</string>
+
+    <string name="chef">طبخ (تواصي)</string>
+    <string name="cosmetic">اخصائية مكياج</string>
+    <string name="sink">فني سباكة</string>
+    <string name="saw">فني نجارة</string>
+    <string name="socket">فني كهرباء</string>
+    <string name="clean">تنظيف المنزل</string>
+    <string name="deed">فني حدادة</string>
+    <string name="build">تشطيب</string>
+    <string name="delivery"> تحميل و تنزيل</string>
+    <string name="design">مصمم</string>
+    <string name="farming">مُزارع</string>
+    <string name="mokayf">فني تكييف</string>
+    <string name="satalite">فني ستلايت</string>
+    <string name="video">تعديل الفيديوهات</string>
+    <string name="events">تغطية مناسبات</string>
+
+    <array name="areas">
+        <item>الجاردنز</item>
+        <item>المنارو</item>
+        <item>اليادودة</item>
+        <item>ضاحية الامير راشد</item>
+        <item>الجبيهة</item>
+        <item>صويلح</item>
+        <item>دابووق</item>
+        <item>خلدا</item>
+        <item>جبل الحسين</item>
+        <item>الدوار الاول</item>
+        <item>الدوار الثاني</item>
+        <item>الدوار الثالث</item>
+        <item>الدوار الرابع</item>
+        <item>الدوار الخامس</item>
+        <item>الدوار السادس</item>
+        <item>الدوار السابع</item>
+        <item>الدوار الثامن</item>
+        <item>ام اذينة</item>
+        <item>عبدون</item>
+        <item>صويفية</item>
+        <item>دوار الكيلو</item>
+        <item>شارع مكة</item>
+        <item>ضاحية الامير حسن</item>
+        <item>شميساني</item>
+        <item>عرجان</item>
+        <item>شفابدران</item>
+        <item>القويسمة</item>
+        <item>الاشرفية</item>
+        <item>الجوفة</item>
+        <item>التاج</item>
+        <item>النصر</item>
+        <item>ام نوارة</item>
+        <item>الجندويل</item>
+        <item>مرج الحمام</item>
+        <item>طريق المطار</item>
+        <item>البيادر</item>
+        <item>شارع الجامعة</item>
+        <item>تلا علي</item>
+        <item>الياسمسن</item>
+        <item>النزهة</item>
+        <item>ضاحية الرشيد</item>
+        <item>الرونق</item>
+        <item>النظيف</item>
+        <item>نزال</item>
+        <item>الزهور</item>
+        <item>الهاشمي الشمالي</item>
+        <item>الهاشمي الجنوبي</item>
+        <item>ناعور</item>
+        <item>ماركا الشمالية</item>
+        <item>ماركا الجنوبية</item>
+    </array>
+    <string name="title_activity_main">الصفحة الرئيسية</string>
+    <string name="action_sign_in">تسجيل دخول او انشاء حساب</string>
+    <string name="action_sign_in_short">تسجيل دخول</string>
+    <string name="login_text">تسجيل الدخول</string>
+    <string name="use_social_text">-</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="choose_time">الوقت</string>
+    <string name="chose_date">اليوم</string>
+    <string name="choose_location">الموقع</string>
+    <string name="details">تفاصيل</string>
+    <string name="write_details_here">اكتب تفاصيل المهمة هنا</string>
+    <string name="order_now">اطلب الان</string>
+    <string name="order_done">تمت عملية الطلب</string>
+    <string name="please_complete">املئ الحقول</string>
+    <string name="unmatched_password">كلمة المرور غير متطابقة</string>
+    <string name="invalid_phone">رقم الهاتف غير صحيح</string>
+    <string name="invalid_email">البريد الالكتروني غير صحيح</string>
+
 
 </resources>

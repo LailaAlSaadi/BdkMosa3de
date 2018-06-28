@@ -80,13 +80,12 @@ public class SignUpActivity extends AppCompatActivity {
         SharedPreferences sharedpreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
         editor.putString("uid",user.uid);
-        editor.commit();
-
-
-
+        editor.apply();
 
         Intent i = new Intent(SignUpActivity.this, MainActivity_.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
+        finish();
 
     }
 
@@ -95,22 +94,22 @@ public class SignUpActivity extends AppCompatActivity {
                 isEmpty(userPasswordText.getText()) ||
                 isEmpty(userPhoneNumberText.getText()) ||
                 isEmpty(userNameText.getText()) || isEmpty(genderValue)) {
-            Toast.makeText(this, "Please complete the required fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.please_complete), Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (!userCPasswordText.getText().toString().equals(userPasswordText.getText().toString())) {
-            Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.unmatched_password), Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (userPhoneNumberText.getText().length() != 10) {
-            Toast.makeText(this, "Phone must be 10 digits", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.invalid_phone), Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (!isValidEmail(userEmailText.getText())){
-            Toast.makeText(this, "Invalid email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.invalid_email), Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;

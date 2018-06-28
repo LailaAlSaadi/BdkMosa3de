@@ -31,28 +31,24 @@ public class SplashScreen extends AppCompatActivity {
 
     @AfterViews
     public void startSplash() {
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
+        new Handler().postDelayed(() -> {
 
 
-                SharedPreferences sharedpreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
-                String uid = sharedpreferences.getString("uid", null);
+            SharedPreferences sharedpreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
+            String uid = sharedpreferences.getString("uid", null);
 
 
-                if (uid == null) {
-                    Intent i = new Intent(SplashScreen.this, LoginActivity_.class);
-                    startActivity(i);
-                }
-                else {
-                    Intent i = new Intent(SplashScreen.this, MainActivity_.class);
-                    startActivity(i);
-
-                }
-
-                finish();
+            if (uid == null) {
+                Intent i = new Intent(SplashScreen.this, LoginActivity_.class);
+                startActivity(i);
             }
+            else {
+                Intent i = new Intent(SplashScreen.this, MainActivity_.class);
+                startActivity(i);
+
+            }
+
+            finish();
         }, SPLASH_TIME_OUT);
     }
 

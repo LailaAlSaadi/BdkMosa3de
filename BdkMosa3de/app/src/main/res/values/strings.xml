@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bdk Mosa3de? بدك مساعدة؟</string>
+    <string name="app_name">Bdk Mosa3de? </string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_login">Sign in</string>
 
@@ -24,4 +24,93 @@
     <string name="phone_number">Phone Number</string>
     <string name="user_name">Username</string>
     <string name="birthdate">Birthdate</string>
+
+
+    <string name="chef">Chef (orders)</string>
+    <string name="cosmetic">Makeup artist</string>
+    <string name="sink">‏Plumbing</string>
+    <string name="saw">‏Carpentry</string>
+    <string name="socket">‏Electricity</string>
+    <string name="clean">House cleaning</string>
+    <string name="deed">‏Blacksmith</string>
+    <string name="build">Tashteeb</string>
+    <string name="delivery">Load and unload</string>
+    <string name="design">Designer</string>
+    <string name="farming">‏Farmer</string>
+    <string name="mokayf">‏Conditioning</string>
+    <string name="satalite">Satellite</string>
+    <string name="video">Montage</string>
+    <string name="events">‏Event Organizer</string>
+
+    <string name="choose_time">* Choose Time</string>
+    <string name="chose_date">* Choose Date</string>
+    <string name="choose_location">Choose Location</string>
+    <string name="details">Details</string>
+    <string name="write_details_here">Write Details here</string>
+    <string name="order_now">Order Now</string>
+    <string name="order_done">Your Order Was Submitted Successfully, \nWill Contact With You Soon</string>
+    <string name="please_complete">Please complete the required fields</string>
+    <string name="unmatched_password">Password doesn\'t match</string>
+    <string name="invalid_phone">Phone must be 10 digits</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="from_time_txt">From</string>
+    <string name="to_time_txt">To</string>
+    <string name="choose_location_map">Choose Location On Map</string>
+
+
+    <array name="areas">
+        <item>AlGardns</item>
+        <item>AlManarah</item>
+        <item>AlYadodah</item>
+        <item>Dahyat Al Ameer Rashid</item>
+        <item>AlJbeeha</item>
+        <item>Swileh</item>
+        <item>Dabouq</item>
+        <item>Khalda</item>
+        <item>Jabal AlHusain</item>
+        <item>1st Circle</item>
+        <item>2nd Circle</item>
+        <item>3ed Circle</item>
+        <item>4th Circle</item>
+        <item>5th Circle</item>
+        <item>6th Circle</item>
+        <item>7th Circle</item>
+        <item>8th Circle</item>
+        <item>Um Uthineh</item>
+        <item>Abdoun</item>
+        <item>Swifieh</item>
+        <item>Kilo Circle</item>
+        <item>Maca Street</item>
+        <item>Dahyat Al Ameer Hasan</item>
+        <item>Shmisani</item>
+        <item>Arjan</item>
+        <item>Shafa Badran</item>
+        <item>AlQuaismeh</item>
+        <item>AlAshrafiah</item>
+        <item>AlJofeh</item>
+        <item>AlTaj</item>
+        <item>AlNaser</item>
+        <item>Um Nowarah</item>
+        <item>AlJandaweel</item>
+        <item>Marj AlHamam</item>
+        <item>Airport way</item>
+        <item>AlBayader</item>
+        <item>AlJama\'a Street</item>
+        <item>Telae AlAli</item>
+        <item>AlYasmin</item>
+        <item>AlNozha</item>
+        <item>Dahyat AlRasheed</item>
+        <item>AlRawnaq</item>
+        <item>AlNadeef</item>
+        <item>Nazal</item>
+        <item>AlZhor</item>
+        <item>Alhashmi alshamali</item>
+        <item>Alhashmi aljanoubi</item>
+        <item>Naour</item>
+        <item>Marka alshamalia</item>
+        <item>marka aljnobya</item>
+
+    </array>
+    <string name="title_activity_maps">Map</string>
+
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".activities.SignUpActivity">
 
     <!-- Comment this ImageView after you have handled the image background with Java at the Activity-->
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@color/ic_launcher_background"
+        android:background="@color/colorPrimaryDark"
         />
 
     <ImageView
@@ -39,7 +40,8 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textlogo">
+        android:layout_below="@id/textlogo"
+        android:src="@color/ic_launcher_background" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,6 +72,7 @@
                     android:textSize="20sp" />
 
                 <AutoCompleteTextView
+                    android:inputType="textEmailAddress"
                     android:id="@+id/userEmail"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -103,6 +106,7 @@
                     />
 
                 <Button
+                    android:id="@+id/loginNow"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_gravity="center"
