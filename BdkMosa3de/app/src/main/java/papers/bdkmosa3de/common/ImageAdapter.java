@@ -35,13 +35,7 @@ public class ImageAdapter extends BaseAdapter {
         View gridView;
 
         if (convertView == null) {
-            gridView = new View(context);
-            // get layout from mobile.xml
             gridView = inflater.inflate(R.layout.grid_row, null);
-
-            // set value into textview
-
-            // set image based on selected text
             ImageView imageView = gridView
                     .findViewById(R.id.grid_item_image);
 
@@ -49,13 +43,10 @@ public class ImageAdapter extends BaseAdapter {
             TextView textView = gridView.findViewById(R.id.desc);
             textView.setText(desc[position]);
             imageView.setImageResource(images[position]);
-            imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(context, OrderActivity_.class);
-                    i.putExtra("key",position);
-                    context.startActivity(i);
-                }
+            imageView.setOnClickListener(v -> {
+                Intent i = new Intent(context, OrderActivity_.class);
+                i.putExtra("key",position);
+                context.startActivity(i);
             });
 
         } else {

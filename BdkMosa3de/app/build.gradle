@@ -1,6 +1,20 @@
 apply plugin: 'com.android.application'
 
+
 android {
+    signingConfigs {
+        config {
+            keyAlias 'papers'
+            keyPassword '123321'
+            storeFile file('/home/u689/Documents/spring-android-samples-master/BdkMosa3de/k.jks')
+            storePassword '123321'
+        }
+    }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/LICENSE'
@@ -21,19 +35,29 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        buildTypes {
+            debug {
+                manifestPlaceholders = ["google_map_key": "AIzaSyDh7PpFIVyreCA1hMVu3EE4PXTbm6ipH98"]
+            }
+            release {
+                manifestPlaceholders = ["google_map_key": "AIzaSyDh7PpFIVyreCA1hMVu3EE4PXTbm6ipH98"]
+            }
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        targetCompatibility 1.8
-        sourceCompatibility 1.8
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.google.firebase:firebase-database:11.6.0'
@@ -42,15 +66,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     def AAVersion = '4.4.0'
-
     annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
     implementation 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
     implementation 'com.marvinlabs:android-slideshow-widget:0.4.+@aar'
     implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
     implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    implementation 'com.google.android.gms:play-services-location:11.6.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

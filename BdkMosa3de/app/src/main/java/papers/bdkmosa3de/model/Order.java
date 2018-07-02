@@ -1,5 +1,8 @@
 package papers.bdkmosa3de.model;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Order {
     public String uid;
     public String date;
@@ -7,8 +10,16 @@ public class Order {
     public String details;
     public String serviceType;
     public String toTime;
-    private String fromTime;
+    public String fromTime;
+    public String location;
+    private String createdDate;
 
+    public Order(){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+        createdDate = simpleDateFormat.format(new Date());
+
+
+    }
     public void setUid(String uid) {
         this.uid = uid;
     }
@@ -35,5 +46,13 @@ public class Order {
 
     public void setFromTime(String fromTime) {
         this.fromTime = fromTime;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
     }
 }

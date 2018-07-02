@@ -115,11 +115,6 @@ public class SignUpActivity extends AppCompatActivity {
         return true;
     }
 
-
-    //    public String getBirthdate() {
-//        return birthdateIn.getDayOfMonth() + "-" + (birthdateIn.getMonth() + 1) + "-" + birthdateIn.getYear();
-//    }
-//
     private static final String EMAIL_REGEX = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
     private static Pattern pattern= Pattern.compile(EMAIL_REGEX, Pattern.CASE_INSENSITIVE);
     private Matcher matcher;
@@ -130,23 +125,15 @@ public class SignUpActivity extends AppCompatActivity {
     }
     @AfterViews
     public void genderRadio() {
-        genderRdGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                int selectedId = radioGroup.getCheckedRadioButtonId();
-                RadioButton radioButton = findViewById(selectedId);
-                if (radioButton.getText().equals("Female")) genderValue = "F";
-                else if (radioButton.getText().equals("Male")) genderValue = "M";
-            }
+        genderRdGroup.setOnCheckedChangeListener((radioGroup, checkedId) -> {
+            int selectedId = radioGroup.getCheckedRadioButtonId();
+            RadioButton radioButton = findViewById(selectedId);
+            if (radioButton.getText().equals(R.string.female)) genderValue = "F";
+            else if (radioButton.getText().equals(R.string.female)) genderValue = "M";
         });
     }
 
     public String getID() {
         return UUID.randomUUID().toString();
     }
-
-
-//    @AfterViews
-//    public void checkDup() {
-//    }
 }

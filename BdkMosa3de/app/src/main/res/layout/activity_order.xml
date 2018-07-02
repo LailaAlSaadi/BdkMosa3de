@@ -27,9 +27,9 @@
         android:layout_below="@id/textlogo">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -57,7 +57,6 @@
                     android:layout_marginEnd="30dp"
                     android:layout_marginStart="30dp"
                     android:orientation="horizontal">
-
 
 
                     <TextView
@@ -94,13 +93,13 @@
 
 
                     <TextView
-                        android:textColor="@color/white"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:text="@string/from_time_txt" />
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/from_time_txt"
+                        android:textColor="@color/white" />
 
                     <TextView
                         android:id="@+id/from_time"
@@ -115,13 +114,13 @@
                         android:text="00:00" />
 
                     <TextView
-                        android:textColor="@color/white"
-                        android:layout_marginTop="10dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:text="@string/to_time_txt" />
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/to_time_txt"
+                        android:textColor="@color/white" />
 
 
                     <TextView
@@ -149,23 +148,52 @@
                     android:textColorHint="@color/white"
                     android:textSize="20sp" />
 
-                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
-                    android:background="@drawable/rounded_white"
-                    android:spinnerMode="dialog"
-                    android:id="@+id/areas"
+                <RadioGroup
+                    android:gravity="center"
+                    android:id="@+id/locMethod"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="10dp"
-                    android:entries="@array/areas" />
+                    android:orientation="horizontal">
 
+                    <RadioButton
+                        android:textColor="@color/white"
+                        android:id="@+id/onarea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/on_map" />
+
+                    <RadioButton
+                        android:textColor="@color/white"
+                        android:id="@+id/onmap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/from_areas" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/areas"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_white"
+                        android:entries="@array/areas"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:spinnerMode="dialog" />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/locMap"
-                    android:text="@string/choose_location_map"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginEnd="30dp"
@@ -174,50 +202,56 @@
                     android:layout_weight=".5"
                     android:background="@drawable/rounded_white"
                     android:gravity="center"
-                    />
-                <TextView
-                    android:id="@+id/details"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/gochi_hand"
-                    android:gravity="center"
-                    android:text="@string/details"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="20sp" />
-
-                <EditText
-                    android:id="@+id/in_det"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/rounded_white"
-                    android:gravity="top|left"
-                    android:hint="@string/write_details_here"
                     android:lines="4"
                     android:maxLines="10"
                     android:minLines="1"
-                    android:paddingBottom="20dp"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:paddingTop="20dp"
-                    android:scrollbarAlwaysDrawVerticalTrack="true" />
-
+                    android:text="@string/choose_location_map" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/orderNow"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="100dp"
-                android:layout_marginTop="15dp"
+
+            <TextView
+                android:id="@+id/details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/order_now"
-                android:textColor="@color/black" />
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/gochi_hand"
+                android:gravity="center"
+                android:text="@string/details"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/in_det"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_white"
+                android:gravity="top|left"
+                android:hint="@string/write_details_here"
+                android:lines="4"
+                android:maxLines="10"
+                android:minLines="1"
+                android:paddingBottom="20dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true" />
 
         </LinearLayout>
+
+
     </ScrollView>
+
+    <Button
+        android:id="@+id/orderNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/order_now"
+        android:textColor="@color/black" />
 </LinearLayout>

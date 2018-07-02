@@ -12,19 +12,14 @@ import java.util.ArrayList;
 
 import papers.bdkmosa3de.R;
 
-/**
- * Created by Parsania Hardik on 23/04/2016.
- */
 public class SlidingImage_Adapter extends PagerAdapter {
 
 
     private ArrayList<ImageModel> imageModelArrayList;
     private LayoutInflater inflater;
-    private Context context;
 
 
     public SlidingImage_Adapter(Context context, ArrayList<ImageModel> imageModelArrayList) {
-        this.context = context;
         this.imageModelArrayList = imageModelArrayList;
         inflater = LayoutInflater.from(context);
     }

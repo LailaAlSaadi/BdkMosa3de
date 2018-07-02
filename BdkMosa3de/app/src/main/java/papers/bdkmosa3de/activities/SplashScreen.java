@@ -18,11 +18,10 @@ import papers.bdkmosa3de.R;
 @EActivity(R.layout.activity_splash)
 public class SplashScreen extends AppCompatActivity {
 
+    private static int SPLASH_TIME_OUT = 3000;
+
     @ViewById(R.id.needHelpAr)
     TextView needHelp;
-
-
-    private static int SPLASH_TIME_OUT = 3000;
 
     @AfterViews
     public void preFont() {

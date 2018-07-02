@@ -112,5 +112,19 @@
 
     </array>
     <string name="title_activity_maps">Map</string>
+    <string name="about">تطبيق "بدك مساعدة؟" \nهو رسالة الشباب الى هذا المجتمع العظيم ، نسعى الى بناء جيل يعي ما يجب ان يكون ،
+و نعالج المشاكل و التحديات التي تواجهنا في هذا المجتمع ،\n نوفر لكم ١٥ خدمة يقدمها طلاب الجامعات
+\nحتى تبني لهم خبرةً عملية و تساعدهم في الحصول على عمل ، \nنحن الشباب نحن البناة.</string>
+    <string name="from_areas">From Areas</string>
+    <string name="on_map">On Map</string>
+    <string name="female" />
+    <string name="male">male</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

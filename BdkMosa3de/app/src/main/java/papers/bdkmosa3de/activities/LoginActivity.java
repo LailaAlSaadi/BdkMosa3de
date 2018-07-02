@@ -35,15 +35,6 @@ public class LoginActivity extends AppCompatActivity {
     public void hideKeyboard() {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         userList = itemDao.getUsers();
-
-//        User user = new User();
-//        user.setEmail("email");
-//        user.setGender("F");
-//        user.setPassword("password");
-//        user.setPhoneNumber("123");
-//        user.setUsername("username");
-//        user.setUid("0");
-//        itemDao.addEntry(user);
     }
 
     @Click

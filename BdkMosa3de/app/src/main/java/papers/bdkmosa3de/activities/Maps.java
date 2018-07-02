@@ -4,19 +4,15 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
-import android.os.Handler;
+import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
@@ -27,17 +23,11 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-
-import java.util.Map;
 
 import papers.bdkmosa3de.R;
-
-import static android.support.v7.widget.ListPopupWindow.WRAP_CONTENT;
 
 public class Maps extends FragmentActivity {
 
@@ -45,18 +35,7 @@ public class Maps extends FragmentActivity {
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.READ_CONTACTS
     };
-    private static final String[] CAMERA_PERMS = {
-            Manifest.permission.CAMERA
-    };
-    private static final String[] CONTACTS_PERMS = {
-            Manifest.permission.READ_CONTACTS
-    };
-    private static final String[] LOCATION_PERMS = {
-            Manifest.permission.ACCESS_FINE_LOCATION
-    };
     private static final int INITIAL_REQUEST = 1337;
-    private static final int CAMERA_REQUEST = INITIAL_REQUEST + 1;
-    private static final int CONTACTS_REQUEST = INITIAL_REQUEST + 2;
     private static final int LOCATION_REQUEST = INITIAL_REQUEST + 3;
 
     private FrameLayout frameLayout;
@@ -67,8 +46,6 @@ public class Maps extends FragmentActivity {
     private ProgressBar progress;
     private SupportMapFragment mapFragment;
     private GoogleMap mGoogleMap;
-    private boolean isMoving;
-    private int circleRadius;
     LocationManager lm;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -122,7 +99,7 @@ public class Maps extends FragmentActivity {
         chooseLocation.setOnClickListener(v -> {
             Intent i = new Intent(new Intent(Maps.this, OrderActivity_.class));
             CameraPosition cameraPosition = mGoogleMap.getCameraPosition();
-            i.putExtra("loc", cameraPosition.target.latitude+","+cameraPosition.target.longitude);  // insert your extras here
+            i.putExtra("loc", cameraPosition.target.latitude + "," + cameraPosition.target.longitude);  // insert your extras here
             startActivityForResult(i, 0);
         });
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -130,43 +107,14 @@ public class Maps extends FragmentActivity {
             mGoogleMap = googleMap;
 
             mGoogleMap.setOnCameraMoveStartedListener(i -> {
-                isMoving = true;
                 textView.setVisibility(View.GONE);
                 progress.setVisibility(View.GONE);
-                Drawable mDrawable;
-//                if (Build.VERSION.SDK_INT >= 21)
-//                    mDrawable = getApplicationContext().getResources().getDrawable(R.drawable.circle_background_moving, null);
-//                else
-//                    mDrawable = getApplicationContext().getResources().getDrawable(R.drawable.circle_background_moving);
-
-//                circleFrameLayout.setBackground(mDrawable);
-                //resizeLayout(false);
             });
 
 
             mGoogleMap.setOnCameraIdleListener(() -> {
 
-//                isMoving = false;
-//                textView.setVisibility(View.INVISIBLE);
-//                progress.setVisibility(View.VISIBLE);
-                //esizeLayout(true);
             });
-        /* this is just an example that simulates data loading
-           you shoud substitute it with your logic
-        */
-//            new Handler().postDelayed(() -> {
-//
-//                Drawable mDrawable;
-//                if (Build.VERSION.SDK_INT >= 21)
-//                    mDrawable = getApplicationContext().getResources().getDrawable(R.drawable.circle_background, null);
-//                else
-//                    mDrawable = getApplicationContext().getResources().getDrawable(R.drawable.circle_background);
-//
-//                    circleFrameLayout.setBackground(mDrawable);
-//                    textView.setVisibility(View.VISIBLE);
-//                    progress.setVisibility(View.GONE);
-//
-//            }, 1500);
         });
 
         MapsInitializer.initialize(getApplicationContext());
@@ -207,45 +155,16 @@ public class Maps extends FragmentActivity {
                 });
     }
 
-
     private void moveMapCamera() {
         if (mGoogleMap == null) {
             return;
         }
 
         CameraUpdate center = CameraUpdateFactory
-                .newLatLng(new LatLng(40.76793169992044, -73.98180484771729));
+                .newLatLng(new LatLng(31.944375, 35.927123));
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
 
         mGoogleMap.moveCamera(center);
         mGoogleMap.animateCamera(zoom);
-    }
-
-
-    //resing circle pin
-    private void resizeLayout(boolean backToNormalSize) {
-        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) circleFrameLayout.getLayoutParams();
-
-        ViewTreeObserver vto = circleFrameLayout.getViewTreeObserver();
-        vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                circleFrameLayout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-                circleRadius = circleFrameLayout.getMeasuredWidth();
-            }
-        });
-
-        if (backToNormalSize) {
-            params.width = WRAP_CONTENT;
-            params.height = WRAP_CONTENT;
-            params.topMargin = 0;
-
-        } else {
-            params.topMargin = (int) (circleRadius * 0.3);
-            params.height = circleRadius - circleRadius / 3;
-            params.width = circleRadius - circleRadius / 3;
-        }
-
-        circleFrameLayout.setLayoutParams(params);
     }
 }

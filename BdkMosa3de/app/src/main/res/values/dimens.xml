@@ -11,4 +11,6 @@
     <dimen name="inner_circle_radius">40dp</dimen>
     <dimen name="inner_circle_margin">4dp</dimen>
     <dimen name="line_top_margin">20dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
 </resources>
